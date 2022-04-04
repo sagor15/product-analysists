@@ -1,16 +1,14 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
-import AppReview from "./Components/appReveiw/AppReview";
+
 import Blog from "./Components/Blog/Blog";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Navber from "./Components/Navber/Navber";
 import Home from "./Components/Other/Home/Home";
 import NotFound from "./Components/Other/NotFound/NotFound";
 import Reveiw from "./Components/Review/Reveiw";
-import useReveiw from "./Hook/useReveiw";
 
 function App() {
-  const [data, setData] = useReveiw();
   return (
     <div className="App">
       <Navber />
@@ -24,9 +22,6 @@ function App() {
 
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
-      <div>
-        <AppReview data={data}></AppReview>
-      </div>
     </div>
   );
 }

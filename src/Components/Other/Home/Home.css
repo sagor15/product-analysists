@@ -1,8 +1,19 @@
-/* .txtDiv {
-  width: 126%;
-  height: 700px;
+.btn-appReview {
+  padding: 15px 120px;
+  background-color: #818cf8;
+  color: white;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  font-size: 19px;
 }
-.txtDiv .img {
-  width: 126%;
-  height: 700px;
-} */
+.home-cart {
+  border: 1px solid #818cf8;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 15px #818cf8;
+}
+.cart1 {
+  margin: 0 auto;
+}
