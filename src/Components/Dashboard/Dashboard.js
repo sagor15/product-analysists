@@ -55,7 +55,7 @@ const Dashboard = () => {
   ];
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 ">
-      <LineChart width={500} height={500} data={data}>
+      <LineChart width={300} height={500} data={data}>
         <Line dataKey={"sell"}></Line>
         <Line dataKey={"investment"}></Line>
         <Line dataKey={"revenue"}></Line>
@@ -64,7 +64,7 @@ const Dashboard = () => {
         <Tooltip></Tooltip>
       </LineChart>
 
-      <PieChart width={500} height={500}>
+      <PieChart width={300} height={500}>
         <Pie data={data} dataKey="sell" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
         <Pie
           data={data}
