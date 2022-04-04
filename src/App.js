@@ -25,10 +25,7 @@ function App() {
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <div>
-         <AppReview 
-         key={data.id}
-         data={data}
-         ></AppReview>
+        <AppReview data={data}></AppReview>
       </div>
     </div>
   );
