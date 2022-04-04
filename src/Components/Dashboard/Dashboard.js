@@ -1,4 +1,18 @@
 import React from "react";
+import {
+  Area,
+  AreaChart,
+  CartesianGrid,
+  Legend,
+  Line,
+  LineChart,
+  Pie,
+  PieChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 const Dashboard = () => {
   const data = [
@@ -39,7 +53,33 @@ const Dashboard = () => {
       revenue: 61000,
     },
   ];
-  return <div></div>;
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 ">
+      <LineChart width={500} height={500} data={data}>
+        <Line dataKey={"sell"}></Line>
+        <Line dataKey={"investment"}></Line>
+        <Line dataKey={"revenue"}></Line>
+        <XAxis dataKey={"month"}></XAxis>
+        <YAxis></YAxis>
+        <Tooltip></Tooltip>
+      </LineChart>
+
+      <PieChart width={500} height={500}>
+        <Pie data={data} dataKey="sell" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
+        <Pie
+          data={data}
+          dataKey="revenue"
+          cx="50%"
+          cy="50%"
+          innerRadius={70}
+          outerRadius={90}
+          fill="#82ca9d"
+          label
+        />
+        <Tooltip></Tooltip>
+      </PieChart>
+    </div>
+  );
 };
 
 export default Dashboard;
