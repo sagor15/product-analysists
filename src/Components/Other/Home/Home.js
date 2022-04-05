@@ -24,6 +24,7 @@ const Home = () => {
         </div>
       </div>
       <div>
+        <h1 className="text-4xl py-8 pt-5">Customer Reviews</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-5 cart1 ">
           {data.slice(0, 3).map((item) => (
             <div className="home-cart">
@@ -39,7 +40,7 @@ const Home = () => {
           ))}
         </div>
         <button className="btn-appReview" onClick={() => handlebtn()}>
-          See More
+          See Customer Reviews
         </button>
       </div>
     </div>
